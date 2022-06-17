@@ -1,0 +1,28 @@
+.l-hdr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 15px 35px;
+  @include media(sm) {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    transition: .3s ease;
+  }
+  &__logo {
+    img {
+      @include media(sm) {
+        width: 100px;
+      }
+    }
+  }
+  &.is-scroll {
+    @include media(sm) {
+      background-color: #fff;
+    }
+  }
+}

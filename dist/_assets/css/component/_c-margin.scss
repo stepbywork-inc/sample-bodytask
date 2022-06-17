@@ -1,0 +1,22 @@
+@for $i from 1 through 20 {
+    .mb#{$i * 5} {
+      margin-bottom: #{$i * 5}px;
+      @include media(sm) {
+        margin-bottom: #{$i * 3}px;
+      }
+    }
+    .mt#{$i * 5} {
+      margin-top: #{$i * 5}px;
+      @include media(sm) {
+        margin-top: #{$i * 3}px;
+      }
+    }
+  }
+  @include media(sm) {
+    .mb60 {
+      margin-bottom: 30px;
+    }
+    .mb40 {
+      margin-bottom: 25px;
+    }
+  }

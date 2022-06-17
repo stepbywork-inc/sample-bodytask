@@ -1,0 +1,29 @@
+.c-pankuzu {
+  background-color: #e6f2f8;
+  padding: 12px 0;
+  @include media(sm) {
+    display: none;
+  }
+  ul {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    width: 100%;
+    overflow: hidden;
+    li {
+      display: inline;
+      + li {
+        &:before {
+          margin: 0 3px;
+          color: black;
+          content: '>';
+        }
+      }
+      a,span {
+        font-size: 16px;
+      }
+      a {
+      }
+    }
+  }
+}

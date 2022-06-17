@@ -1,0 +1,86 @@
+@use "sass:math";
+// 03__フォントサイズとラインハイトまとめて指定
+// ----------------------------------------------------------
+@mixin fz($size, $height: false, $weight: false) {
+	font-size: #{$size}px;
+
+	@if $weight {
+		font-weight: $weight;
+	}
+
+	@if $height {
+		line-height: calc($height / $size);
+	}
+}
+@mixin fzr($size, $height: false, $weight: false) {
+	font-size: math.div($size, 10) * 1rem;
+
+	@if $weight {
+		font-weight: $weight;
+	}
+
+	@if $height {
+		line-height: calc($height / $size);
+	}
+}
+
+// 06__media query
+// ----------------------------------------------------------
+@mixin media($size, $px: false) {
+	@if ($size == "pc") {
+		@media screen and (max-width: $breakPointPc - 1) {
+			@content;
+		}
+	} @else if ($size == "pcup") {
+		@media screen and (min-width: $breakPointPc), print {
+			@content;
+		}
+	}
+	@if ($size == "tab") {
+		@media screen and (max-width: $breakPointTab - 1) {
+			@content;
+		}
+	} @else if ($size == "tabup") {
+		@media screen and (min-width: $breakPointTab), print {
+			@content;
+		}
+	}
+	@if ($size == "sm") {
+		@media screen and (max-width: $breakPoint - 1) {
+			@content;
+		}
+	} @else if ($size == "lg") {
+		@media screen and (min-width: $breakPoint), print {
+			@content;
+		}
+	}
+	@if ($size == "min") {
+		@media screen and (max-width: $breakPointMin - 1) {
+			@content;
+		}
+	} @else if ($size == "minup") {
+		@media screen and (min-width: $breakPointMin), print {
+			@content;
+		}
+	}
+
+	@if ($px) {
+		@if ($size == "max-width") {
+			@media screen and (max-width: $px) {
+				@content;
+			}
+		} @else if ($size == "min-width") {
+			@media screen and (min-width: $px) {
+				@content;
+			}
+		} @else if ($size == "max-height") {
+			@media screen and (max-height: $px) {
+				@content;
+			}
+		} @else if ($size == "min-height") {
+			@media screen and (min-height: $px) {
+				@content;
+			}
+		}
+	}
+}

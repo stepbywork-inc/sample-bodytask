@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
+    "css-declaration-sorter": "^6.1.3",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.0.12",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-terser": "^2.1.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "postcss-easing-gradients": "^3.0.1",
+    "sass": "^1.44.0"
+  },
+  "volta": {
+    "node": "16.13.1",
+    "yarn": "1.22.17",
+    "npm": "8.2.0"
+  }
+}
