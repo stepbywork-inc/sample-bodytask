@@ -1,0 +1,6 @@
+.c-wave {
+  width: 100%;
+  &--rev {
+    transform: rotate(180deg);
+  }
+}

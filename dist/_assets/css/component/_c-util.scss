@@ -1,12 +1,13 @@
 .c-inner {
 	max-width: 1110px;
-	width: calc(100% - 40px);
+	width: calc(100% - 80px);
 	margin-left: auto;
 	margin-right: auto;
 	&--1440 {
 		max-width: 1440px;
 	}
 	@include media(sm) {
+		width: calc(100% - 40px);
 	}
 }
 @include media(tabup) {
@@ -43,4 +44,7 @@
 		@include media(sm) {
 		}
 	} 
+}
+.c-en {
+	font-family: 'Josefin Sans', sans-serif;
 }

@@ -1,11 +1,14 @@
 .c-titA {
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+  @include media(sm) {
+    margin-bottom: 20px;
+  }
   &__en {
     font-size: 64px;
     @include media(sm) {
-      font-size: 40px;
+      font-size: 30px;
     }
   }
   &__ja {
@@ -13,7 +16,7 @@
     font-weight: bold;
     color: $pink;
     @include media(sm) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   &--white {

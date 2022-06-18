@@ -4,25 +4,27 @@
   left: 0;
   width: 100%;
   z-index: 9999;
-  padding: 15px 35px;
+  padding: 35px;
   @include media(sm) {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 20px;
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     transition: .3s ease;
   }
   &__logo {
     img {
-      @include media(sm) {
-        width: 100px;
-      }
+      width: 100px;
+    }
+  }
+  &__btn {
+    @include media(sm) {
+      margin-left: 10px;
+      flex-shrink: 0;
     }
   }
   &.is-scroll {
-    @include media(sm) {
-      background-color: #fff;
-    }
+    background-color: #fff;
   }
 }
